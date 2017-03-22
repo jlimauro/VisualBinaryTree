@@ -38,7 +38,7 @@ Node.prototype.visit = function(parent) {
     text(this.value, this.x, this.y);
     stroke(255);
     noFill()
-    ellipse(this.x, this.y, 20, 20);
+    ellipse(this.x, this.y - 3, 20, 20);
     line(parent.x, parent.y, this.x, this.y);
 
     if (this.right != null) {
