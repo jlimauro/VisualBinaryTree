@@ -1,8 +1,9 @@
 var tree;
+var canvasWidth = 600;
+var canvasHeight = 400;
 
 function setup() {
-    //noCanvas();
-    createCanvas(600, 400);
+    createCanvas(canvasWidth + 40, canvasHeight);
     background(51);
 
     tree = new Tree();
@@ -16,8 +17,4 @@ function setup() {
     var result = tree.search(10);
     if (result != null)
         console.log(result);
-}
-
-function draw() {
-
 }

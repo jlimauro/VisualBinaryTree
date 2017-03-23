@@ -5,6 +5,7 @@ function Tree() {
 Tree.prototype.addValue = function(val) {
     var n = new Node(val);
     if (this.root == null) {
+        console.log(n.val);
         this.root = n;
         this.root.x = width / 2;
         this.root.y = 30;
