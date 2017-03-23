@@ -4,6 +4,7 @@ function Node(val, x, y) {
     this.value = val;
     this.x = x;
     this.y = y;
+    this.distance = 2;
 }
 
 Node.prototype.addNode = function(n) {
@@ -35,11 +36,15 @@ Node.prototype.visit = function(parent) {
     fill(255);
     noStroke();
     textAlign(CENTER);
-    text(this.value, this.x, this.y);
-    stroke(255);
-    noFill()
-    ellipse(this.x, this.y - 3, 20, 20);
+    textSize(12);
+    stroke(255, 100);
     line(parent.x, parent.y, this.x, this.y);
+    stroke(255);
+    fill(0);
+    ellipse(this.x, this.y, 24, 24);
+    noStroke();
+    fill(255);
+    text(this.value, this.x, this.y + 4);
 
     if (this.right != null) {
         this.right.visit(this);
